@@ -1,13 +1,13 @@
 "use strict";
-function uts(title){ //title parameter might be useless (MA)
-    
+function uts(){ 
+    let testNum=1;
     let testsFailed=0;
             //number of tests failed
 
     console.log("text testNum | Pass/Fail | [ expectedResponse | response]");
     console.log("---");
 
-    function runTest(testNum, expectedResponse, arrayToTest) {
+    function runTest(expectedResponse, arrayToTest) {
         let response=arrayToTest;
     
         //let result = response === expectedResponse ? "Pass" : "Fail";
@@ -23,7 +23,8 @@ function uts(title){ //title parameter might be useless (MA)
         }
     
         console.log(`${testNum} | ${result} | ${expectedResponse} | ${response}`);
-    
+        
+        testNum++;
         if (result === "Fail") {
           testsFailed++;
         }
@@ -31,8 +32,10 @@ function uts(title){ //title parameter might be useless (MA)
     
 
     let correctAnswer=["manzana","platano","sandia","pera","cereza","melocoton"];
-    let arrayToTest=insertInArray(["manzana","platano","sandia","pera","melocoton"],3,"cereza");
-    runTest(1,correctAnswer,arrayToTest);
+    let arrayToTest1=insertInArray(["manzana","platano","sandia","pera","melocoton"],3,"cereza");
+    let arrayToTest2=insertInArray(["hoja","platano","sandia","pera","melocoton"],3,"cereza");
+    runTest(correctAnswer,arrayToTest1);
+    runTest(correctAnswer,arrayToTest2);
 
     console.log("---");
     console.log("Fails: "+testsFailed);
