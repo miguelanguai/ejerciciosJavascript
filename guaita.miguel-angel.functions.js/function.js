@@ -1,3 +1,4 @@
+"use strict";
 function insertInArray(arrayIn, indexThatIsBefore, arrayOrPrimitiveToInsert){
     let arrayOut=[];
     let arrayInLength=0;
