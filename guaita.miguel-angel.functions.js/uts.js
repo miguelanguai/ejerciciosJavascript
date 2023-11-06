@@ -10,17 +10,25 @@ function uts(){
     function runTest(expectedResponse, arrayToTest) {
         let response=arrayToTest;
     
-        //let result = response === expectedResponse ? "Pass" : "Fail";
-        //this doesn't work for arrays
+        //let result = response === expectedResponse ? "Pass" : "Fail"; this
+        //doesn't work for arrays
 
         //we need to check every index in both arrays and compare them
-        let result="Pass";
-        for (let i=0;i<expectedResponse.length;i++){
-            if (!(response[i]===expectedResponse[i])){
-                result = "Fail";
-                break;
+        /*
+        let result="Pass"; for (let i=0;i<expectedResponse.length;i++){ if
+        (!(response[i]===expectedResponse[i])){ result = "Fail"; break;
             }
         }
+        */
+        function compareTwoArrays(arrayA, arrayB){
+            for (let i=0;i<arrayA.length;i++){
+                if (!(arrayA[i]===arrayB[i])){
+                    return false;
+                }
+            }
+            return true;
+        }
+        let result = compareTwoArrays(response,expectedResponse) ? "Pass" : "Fail";
     
         console.log(`${testNum} | ${result} | ${expectedResponse} | ${response}`);
         
