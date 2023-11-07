@@ -4,7 +4,7 @@ function uts(){
     let testsFailed=0;
             //number of tests failed
 
-    console.log("text testNum | Pass/Fail | [ expectedResponse | response]");
+    console.log("testNum | Pass/Fail | [ expectedResponse | response]");
     console.log("---");
 
     function runTest(expectedResponse, arrayToTest) {

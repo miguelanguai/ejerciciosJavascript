@@ -1,5 +1,5 @@
 "use strict";
-function insertInArray(arrayIn, indexThatIsBefore, arrayOrPrimitiveToInsert){
+function insertInArrayInPlace(arrayIn, indexThatIsBefore, arrayOrPrimitiveToInsert){
     let arrayOut=[];
     let arrayInLength=0;
 
@@ -36,9 +36,13 @@ function insertInArray(arrayIn, indexThatIsBefore, arrayOrPrimitiveToInsert){
         //It's the same as the arrayIn iterator
     }
 
-    return arrayOut;
+    //update arrayInOut (variable needs to be specified here)
+    arrayInOut=[];
+    for (let i=0;i<arrayOut.length;i++){
+        arrayInOut.push(arrayOut[i]);
+    }
+    
 }
-let arrayToShow=insertInArray(["manzana","platano","sandia","pera","melocoton"],3,"cereza");
-//let arrayToShow=insertInArray(["manzana","platano","sandia","pera","melocoton"],3,["cerdo","vaca"]);
-console.log(arrayToShow);
+let arrayInOut =["manzana","platano","sandia","pera","melocoton"];
+insertInArrayInPlace(arrayInOut,3,"cereza");
 
