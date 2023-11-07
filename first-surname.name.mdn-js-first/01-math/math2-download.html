@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Math: Task 2</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    // Final result should be 4633.33 Add/update your code here
+
+    let result = 7 + 13 / 9 + 7;
+    let result2 = 100 / 2 * 6;
+
+    //multiplication of result and result2 and assign the result to result
+    result *= result2;
+    //limit decimal places to 2
+    let finalResult=result.toFixed(2);
+    //checking data of finalResult variable
+    //need to initialize finalNumber (outside the condition)
+    let finalNumber=0;
+    if(typeof finalResult==="string"){
+      finalNumber=Number(finalResult);
+    }
+    //to test if it went well
+    alert(finalNumber);
+
+
+    //References
+    /*
+    To limit decimal numbers
+    https://tecnonucleous.com/2018/03/24/como-limitar-los-numeros-decimales-es-javascript/
+    */
+
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+
+    const para1 = document.createElement('p');
+    para1.textContent = `Your finalResult is ${ finalResult }`;
+    const para2 = document.createElement('p');
+    const finalNumberCheck = isNaN(finalNumber) === false ? 'finalNumber is a number type. Well done!' : `Ooops! finalNumber is not a number.`;
+    para2.textContent = finalNumberCheck;
+
+    section.appendChild(para1);
+    section.appendChild(para2);
+  </script>
+
+</html>

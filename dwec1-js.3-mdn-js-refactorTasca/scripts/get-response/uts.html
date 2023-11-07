@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UT: getResponse()</title>
+</head>
+<body>
+    <!--Step 5 instructions-->
+    <script type="text/javascript" src="uts.js"></script>
+    <script src="main.js"></script>
+    <script>
+        console.log("## UT: getResponse() original");
+        console.log("---");
+        uts();
+    </script>
+
+    <!--Step 9 instructions-->
+    <script src="main-fix.js"></script>
+    <script>
+        console.log("## UT: getResponse() fixed");
+        console.log("---");
+        uts();
+    </script>
+
+    <!--Step 13 instructions-->
+    <script src="main-ternary.js"></script>
+    <script>
+        console.log("## UT: getResponse() refactored with ternary for score");
+        console.log("---");
+        uts();
+    </script>
+
+    <!-- Step 14 instructions-->
+    <script src="main-ternary-all.js"></script>
+    <script>
+        console.log("## UT: getResponse() refactored with all ternaries");
+        console.log("---");
+        uts();
+    </script>
+
+    <!--Step 15 instructions-->
+    <script src="main-switch.js"></script>
+    <script>
+        console.log("## UT: getResponse() refactored with a switch");
+        console.log("---");
+        uts();
+    </script>
+</body>
+</html>
