@@ -7,11 +7,11 @@ while (i) {
 }//last printed is 1
 
 //2. Which values does the while loop show?
-let i = 0;
-while (++i < 5) alert( i );//this shows 4 times
+let i2 = 0;
+while (++i2 < 5) alert( i2 );//this shows 4 times
 
-let i = 0;
-while (i++ < 5) alert( i );//this shows 5 times
+let i3 = 0;
+while (i3++ < 5) alert( i3 );//this shows 5 times
 
 //3. Output even numbers in the loop
 for (let j =2;j<=10;j++){
