@@ -1,13 +1,12 @@
 "use strict";
 function uts(){ 
-    let testNum=1;
     let testsFailed=0;
             //number of tests failed
 
     console.log("testNum | Pass/Fail | [ expectedResponse | response]");
     console.log("---");
 
-    function runTest(expectedResponse, arrayToTest) {
+    function runTest(testNum, expectedResponse, arrayToTest) {
         let response=arrayToTest;
     
         //let result = response === expectedResponse ? "Pass" : "Fail"; this
@@ -42,8 +41,8 @@ function uts(){
     let correctAnswer=["manzana","platano","sandia","pera","cereza","melocoton"];
     let arrayToTest1=insertInArray(["manzana","platano","sandia","pera","melocoton"],3,"cereza");
     let arrayToTest2=insertInArray(["hoja","platano","sandia","pera","melocoton"],3,"cereza");
-    runTest(correctAnswer,arrayToTest1);
-    runTest(correctAnswer,arrayToTest2);
+    runTest(1, correctAnswer,arrayToTest1);
+    runTest(2, correctAnswer,arrayToTest2);
 
     console.log("---");
     console.log("Fails: "+testsFailed);

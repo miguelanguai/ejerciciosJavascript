@@ -16,6 +16,8 @@ function sortArrayByType(arrayOriginal) {
     const arrString = [];
     //arrayOriginal [arrLength+3]=arrString;
 
+    const arrDirty = [];
+
     //sacar datos de arrayOriginal y meterlos en cada uno
     for (let i = 0; i < arrayOriginal.length;) {
         switch (typeof arrayOriginal[i]) {
@@ -32,10 +34,12 @@ function sortArrayByType(arrayOriginal) {
                 arrBoolean.push(arrayOriginal.shift());
                 break;
             default:
-                console.log("jajja pringao");
+                console.log("pusheado a dirty");
+                arrDirty.push(arrayOriginal.shift());
                 break;
         }
     }
+    console.log("bigInt");
     console.log(arrBigint);
     console.log(arrBoolean);
     console.log(arrNum);
@@ -61,4 +65,13 @@ function sortArrayByType(arrayOriginal) {
 const arrA = ["a", true, 5, 8, true, "holis", "adiosis", false, 10n, 10n, "b", true, 10n, 56, "ahora te cambias"];
 sortArrayByType(arrA);
 console.log(arrA);
-//console.log(sortArrayByType(arrA));
+
+console.log("---");
+const arrB = [,"hello",true,6n, false, "bye",,54,3n,"world",false,,"hi"];
+sortArrayByType(arrB);
+console.log(arrB);
+
+console.log("---");
+const arrC = [4, true, "falta bigInt"];
+sortArrayByType(arrC);
+console.log(arrC);
